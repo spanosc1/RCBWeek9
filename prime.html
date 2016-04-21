@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var isPrime = function(num) {
+		console.log(num);
+		if(num == 0 || num == 1)
+		{
+			console.log("number is neither prime nor composite");
+		}
+		else if(num == 2)
+		{
+			console.log("number is prime");
+		}
+		else if(num%2 == 0)
+		{
+			console.log("number is not prime")
+		}
+		else
+		{
+			var prime = true;
+			var mid = Math.floor(num/2);
+			for(var i = 3; i <= mid; i++)
+			{
+				var remainder = num % i;
+				if(remainder == 0)
+				{
+					prime == false;
+				}
+			}
+			if(prime == true)
+			{
+				console.log("number is prime");
+			}
+			else
+			{
+				console.log("number is not prime");
+			}
+		}
+	}
+	isPrime(25);
+	</script>
+</body>
+</html>
